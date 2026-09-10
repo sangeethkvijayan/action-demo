@@ -1,0 +1,30 @@
+name: Multiple Jobs Demo
+
+on:
+  push:
+
+jobs:
+
+  hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Say Hello
+        run: echo "Hello from Job 1"
+
+  information:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Show Repository
+        run: echo "Repository is ${{ github.repository }}"
+
+      - name: Show Branch
+        run: echo "Branch is ${{ github.ref_name }}"
+
+  goodbye:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Say Goodbye
+        run: echo "Goodbye from Job 3"
