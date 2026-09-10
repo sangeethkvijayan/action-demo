@@ -1,0 +1,26 @@
+name: Multiple Steps Demo
+
+on:
+  push:
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Step 1 - Start
+        run: echo "Starting the process"
+
+      - name: Step 2 - Check Version
+        run: python --version
+
+      - name: Step 3 - Create File
+        run: echo "Hello GitHub Actions" > message.txt
+
+      - name: Step 4 - Read File
+        run: cat message.txt
+
+      - name: Step 5 - Finish
+        run: echo "Process completed"
