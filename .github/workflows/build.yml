@@ -1,0 +1,12 @@
+name: Say Hello Workflow
+on:
+  push:
+    branches:
+      - main
+      - 'feature/**' # Matches any feature branch, e.g., feature/add-login or feature/123-fix
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello Message
+        run: echo "Hello! A push was detected on branch '${{ github.ref_name }}'."
