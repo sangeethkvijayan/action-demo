@@ -1,0 +1,15 @@
+name: Setup Environment
+
+description: Common setup steps
+
+runs:
+  using: composite
+
+  steps:
+    - name: Show Python Version
+      shell: bash
+      run: python --version
+
+    - name: Show Message
+      shell: bash
+      run: echo "Environment setup completed"
