@@ -1,0 +1,33 @@
+
+name: Build and Test
+
+on:
+  push:
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Start Build
+        run: echo "Starting build"
+
+      - name: Build Application
+        run: echo "Building application"
+
+      - name: Build Complete
+        run: echo "Build completed successfully"
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Start Testing
+        run: echo "Starting testing"
+
+      - name: Run Tests
+        run: echo "Running tests"
+
+      - name: Test Complete
+        run: echo "All tests passed"
