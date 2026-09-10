@@ -1,0 +1,32 @@
+name: Reuse Steps Demo
+
+on:
+  push:
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Reuse Setup Steps
+        uses: ./.github/actions/setup
+
+      - name: Build
+        run: echo "Building application"
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Reuse Setup Steps
+        uses: ./.github/actions/setup
+
+      - name: Test
+        run: echo "Testing application"
